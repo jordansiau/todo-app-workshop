@@ -1,0 +1,46 @@
+
+> todo-app-workshop@1.0.0 test:e2e
+> playwright test
+
+[WebServer] (node:29768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:33456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:36444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:36444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:22352) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:1444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 23 tests using 1 worker
+
+(node:35736) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 tests\01-authentication.spec.ts:3:1 › real passkey register, logout, login and HTTP-only seven-day cookie (1.2s)
+  ok  2 tests\01-authentication.spec.ts:22:1 › unauthenticated routes, forged session and invalid verification rejected (528ms)
+  ok  3 tests\01-authentication.spec.ts:52:1 › users cannot read or mutate each other’s data (1.5s)
+  ok  4 tests\02-todo-crud.spec.ts:3:1 › create, edit, complete and confirmed deletion through UI (1.3s)
+  ok  5 tests\02-todo-crud.spec.ts:53:1 › invalid input leaves composer intact and shows error (693ms)
+  ok  6 tests\03-priority.spec.ts:3:1 › priority sorts high-medium-low, filters and edits (1.1s)
+  ok  7 tests\04-due-dates.spec.ts:4:1 › editing an overdue task preserves its original due instant (932ms)
+  ok  8 tests\04-due-dates.spec.ts:35:1 › all metadata through composer; future validation and Singapore date (963ms)
+  ok  9 tests\05-recurring-todos.spec.ts:6:3 › completion generates one daily successor (763ms)
+  ok 10 tests\05-recurring-todos.spec.ts:6:3 › completion generates one weekly successor (687ms)
+  ok 11 tests\05-recurring-todos.spec.ts:6:3 › completion generates one monthly successor (584ms)
+  ok 12 tests\05-recurring-todos.spec.ts:6:3 › completion generates one yearly successor (642ms)
+  ok 13 tests\06-reminders.spec.ts:4:1 › seven options, date dependency and exactly-once reminder API (717ms)
+  ok 14 tests\06-reminders.spec.ts:30:1 › notification client calls browser constructor once when permission granted (613ms)
+  ok 15 tests\07-subtasks.spec.ts:3:1 › add, toggle, progress, delete and parent cascade (1.3s)
+  ok 16 tests\08-tags.spec.ts:3:1 › tag UI create, duplicate error, assignment, live rename, filter and delete (1.8s)
+  ok 17 tests\09-templates.spec.ts:5:1 › save, preview, edit, use and delete template with subtasks and relative date (1.7s)
+  ok 18 tests\10-search-filtering.spec.ts:3:1 › debounced subtask/title/tag search, AND filters, saved presets and clearing (2.2s)
+  ok 19 tests\11-export-import.spec.ts:11:1 › malformed, oversized and partially invalid imports write nothing (624ms)
+  ok 20 tests\11-export-import.spec.ts:46:1 › JSON download and file import preserve relationships with new IDs (1.0s)
+  ok 21 tests\12-calendar.spec.ts:4:1 › 42 days, URL navigation, holidays, overflow and day modal (1.4s)
+  ok 22 tests\13-quality.spec.ts:17:1 › accessible login, workspace, dialog, calendar; responsive themes and evidence (6.9s)
+  ok 23 tests\13-quality.spec.ts:69:1 › local production navigation and authenticated API timing evidence (768ms)
+
+  23 passed (37.8s)

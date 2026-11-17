@@ -1,0 +1,6 @@
+{
+  "scope": "All production JavaScript files in .next/static, including every route, individually gzip-compressed; not route-level or Brotli transfer sizes",
+  "files": 13,
+  "raw_bytes": 636532,
+  "gzip_bytes": 197201
+}

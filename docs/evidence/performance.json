@@ -1,0 +1,13 @@
+{
+  "environment": "Local production server; warm requests; not throttled; not cloud or Lighthouse",
+  "navigation": {
+    "load_ms": 40.89999997615814,
+    "fcp_ms": 68
+  },
+  "api_samples_ms": [
+    7.611000000000786, 7.729800000000978, 8.006600000000617, 9.125,
+    7.797099999999773, 7.767899999998917, 7.119699999999284, 7.787500000002183,
+    6.951600000000326, 6.393000000000029
+  ],
+  "api_average_ms": 7.6289200000002895
+}

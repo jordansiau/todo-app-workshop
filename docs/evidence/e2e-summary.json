@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-17",
+  "environment": "Windows, Node 22.19.0, local Next.js production server, Chromium 159 virtual authenticator, SGT",
+  "runs": [
+    {
+      "run": 1,
+      "passed": 23,
+      "duration": "30.1s"
+    },
+    {
+      "run": 2,
+      "passed": 23,
+      "duration": "37.8s"
+    },
+    {
+      "run": 3,
+      "passed": 23,
+      "duration": "37.8s"
+    }
+  ]
+}

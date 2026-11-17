@@ -1,0 +1,40 @@
+name: Verify deliverable
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run test:coverage
+      - run: npm run build
+      - run: npm run typecheck
+      - run: npm audit --audit-level=moderate
+      - run: npx playwright install --with-deps chromium
+      - name: Three consecutive production browser runs
+        shell: bash
+        run: |
+          for attempt in 1 2 3; do
+            echo "Browser verification run $attempt"
+            npm run test:e2e || exit 1
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verification-evidence
+          path: |
+            playwright-report/
+            test-results/
+            coverage/
+          retention-days: 14
